@@ -13,6 +13,8 @@ const THIRD = {
   main: '#F9DE11',
 };
 
+const mainFont = "'Lato', sans-serif";
+
 const theme = createTheme({
   palette: {
     primary: PRIMARY,
@@ -26,8 +28,7 @@ const theme = createTheme({
   },
 
   typography: {
-    fontSize: 16,
-    fontFamily: ['Lato', 'sans-serif'].join(','),
+    fontFamily: mainFont,
   },
 
   components: {
