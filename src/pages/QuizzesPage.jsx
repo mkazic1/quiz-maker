@@ -1,8 +1,9 @@
-import { Box, Button } from '@mui/material';
+import { Box } from '@mui/material';
+import QuizzesTable from '../components/QuizzesTable';
 
 const QuizzesPage = () => (
   <Box sx={{ marginTop: '80px' }}>
-    <Button variant="outlined">CREATE NEW QUIZ</Button>
+    <QuizzesTable />
   </Box>
 );
 
