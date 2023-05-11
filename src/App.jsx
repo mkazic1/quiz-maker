@@ -1,16 +1,23 @@
-import { CardMedia } from '@mui/material';
-import quizPic from './assets/quiz.png';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import Providers from './providers';
+import ROUTES from './constants/routes';
+import WelcomePage from './pages/WelcomePage';
+import QuizzesPage from './pages/QuizzesPage';
+import NotFoundPage from './pages/NotFoundPage';
+import Layout from './components/Layout';
 
 const App = () => (
-  <CardMedia
-    image={quizPic}
-    alt="Quiz intro"
-    component="img"
-    sx={{
-      width: '100%',
-      height: '100vh',
-    }}
-  />
+  <Providers>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<WelcomePage />} />
+        <Route element={<Layout />}>
+          <Route path={ROUTES.QUIZZES} element={<QuizzesPage />} />
+        </Route>
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </BrowserRouter>
+  </Providers>
 );
 
 export default App;

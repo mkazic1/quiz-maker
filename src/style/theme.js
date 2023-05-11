@@ -13,6 +13,8 @@ const THIRD = {
   main: '#F9DE11',
 };
 
+const mainFont = "'Libre Franklin', sans-serif";
+
 const theme = createTheme({
   palette: {
     primary: PRIMARY,
@@ -26,8 +28,7 @@ const theme = createTheme({
   },
 
   typography: {
-    fontSize: 16,
-    fontFamily: ['Lato', 'sans-serif'].join(','),
+    fontFamily: mainFont,
   },
 
   components: {
@@ -40,8 +41,8 @@ const theme = createTheme({
             textAlign: 'center',
             fontWeight: 'bold',
             letterSpacing: '1.95px',
-            color: PRIMARY.light,
-            backgroundColor: SECONDARY.light,
+            color: PRIMARY.main,
+            backgroundColor: SECONDARY.dark,
             border: '0px',
             borderRadius: '6px',
             boxShadow: 'none',
@@ -64,8 +65,8 @@ const theme = createTheme({
             textAlign: 'center',
             fontWeight: 'bold',
             letterSpacing: '1.95px',
-            color: SECONDARY.main,
-            backgroundColor: PRIMARY.light,
+            color: THIRD.main,
+            backgroundColor: PRIMARY.main,
             border: '0px',
             borderRadius: '6px',
             boxShadow: 'none',
